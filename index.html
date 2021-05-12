@@ -1,0 +1,87 @@
+<!--Marcelo Aceituno R
+Full Stack JAVA 0034-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ninja Desapareciendo</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<style>
+
+body{
+    background-color: black;
+}    
+.div{
+    width: 200px;
+    height: 200px;
+    border: 5px solid red;         
+}
+
+.imagenes{
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    margin: 20px;
+    padding: 20px;
+    background-repeat: no-repeat;
+    justify-content: center;
+    background-size: 100% 100%;
+    border: 5px solid red;    
+}
+#img01{ background-image: url(imagenes/maquina.jpg); }
+#img02{ background-image: url(imagenes/minecraft.jpg); }
+#img03{ background-image: url(imagenes/mortal.jpg); }
+#img04{ background-image: url(imagenes/metal.jpg); }
+#img05{ background-image: url(imagenes/sonic.jpg); }
+#img06{ background-image: url(imagenes/space.png); }
+#img07{ background-image: url(imagenes/street.png); }
+#img08{ background-image: url(imagenes/supermario.jpg); }
+
+#restaurar {
+    background: rgb(48, 48, 209);
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+        -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+    display: block;  
+    width: 150px;
+    height: 40px;  
+    margin-left: 500px;
+    color: wheat;
+}
+
+</style> 
+
+<script>
+     $(document).ready(function(){             
+
+        $(".imagenes").click(function() {
+		    $(this).fadeOut();
+	    });	
+
+        $('#restaurar').click(function(){           
+            $('.imagenes').fadeIn();
+        });
+    
+    });
+
+</script>
+
+</head>
+
+<body>
+
+    <div id="img01" class="imagenes"></div>    
+    <div id="img02" class="imagenes"></div> 
+    <div id="img03" class="imagenes"></div> 
+    <div id="img04" class="imagenes"></div> 
+    <div id="img05" class="imagenes"></div>    
+    <div id="img06" class="imagenes"></div> 
+    <div id="img07" class="imagenes"></div> 
+    <div id="img08" class="imagenes"></div>
+     
+    <input type="button" id="restaurar" value="Restaurar Imagenes">
+        
+</body>
+</html>
